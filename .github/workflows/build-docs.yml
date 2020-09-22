@@ -33,15 +33,15 @@ jobs:
       
       - name: Build docs
         run: |
-          cd %{{ github.workspace }}/docs
-          mkdocs build
-          mv ./docs /docs
-          cd %{{ github.workspace }}
-          git checkout pages
-          rm -rf *
-          mv /docs/* ./
-          touch .nojekyll
-          git commit -a -m "automatically update pages"
+          cd %{{ github.workspace }}/docs && \
+          mkdocs build && \
+          mv ./docs /docs && \
+          cd %{{ github.workspace }} && \
+          git checkout pages && \
+          rm -rf * && \
+          mv /docs/* ./ && \
+          touch .nojekyll && \
+          git commit -a -m "automatically update pages" && \
           git push origin pages
           
 
