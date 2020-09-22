@@ -1,0 +1,17 @@
+site_name: My Docs
+theme: readthedocs
+docs_dir: raw
+site_dir: docs
+copyright: copyright (c) 2020 Huo Jiacheng
+nav:
+        - Home: index.md
+        - About: about.md
+        - Search: test.md
+
+markdown_extensions:
+        - toc:
+                permalink: False
+plugins:
+        - search:
+                lang: en
+                prebuild_index: node
