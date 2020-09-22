@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy Github Pages
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -8,6 +8,8 @@ on:
   workflow_dispatch:
   push:
     branches: [ master ]
+    paths: 
+      - docs/**
   pull_request:
     branches: [ master ]
 
@@ -52,14 +54,3 @@ jobs:
           git config user.email "explr@qq.com"
           git commit -a -m "automatically update pages" 
           git push origin pages
-          
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
