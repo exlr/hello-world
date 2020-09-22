@@ -18,6 +18,8 @@ def a():
 
 中文测试2
 
+更新测试
+
 ## Project layout
 
     mkdocs.yml    # The configuration file.

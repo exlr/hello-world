@@ -14,4 +14,4 @@ markdown_extensions:
 plugins:
         - search:
                 lang: en
-                prebuild_index: node
+                prebuild_index: python
