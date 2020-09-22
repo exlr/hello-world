@@ -37,7 +37,14 @@ jobs:
           mkdocs build 
           mv ./docs /tmp/docs 
           cd ${{ github.workspace }} 
-          git checkout pages 
+          
+      - uses: actions/checkout@v2
+        with:
+          ref: pages
+          
+      - name: Deploy docs
+        run: |
+          cd ${{ github.workspace }}
           rm -rf * 
           mv /tmp/docs/* ./ 
           touch .nojekyll 
