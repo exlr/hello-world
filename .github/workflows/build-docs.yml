@@ -35,11 +35,11 @@ jobs:
         run: |
           cd ${{ github.workspace }}/docs 
           mkdocs build 
-          mv ./docs /docs 
+          mv ./docs /tmp/docs 
           cd ${{ github.workspace }} 
           git checkout pages 
           rm -rf * 
-          mv /docs/* ./ 
+          mv /tmp/docs/* ./ 
           touch .nojekyll 
           git commit -a -m "automatically update pages" 
           git push origin pages
