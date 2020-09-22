@@ -23,26 +23,26 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         
-      - name: Setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: '3.8'
           
-      - name: Install mkdocs
-        run: pip install -U mkdocs
+#      - name: Install mkdocs
+#        run: pip install -U mkdocs
       
       - name: Build docs
         run: |
-          cd %{{ github.workspace }}/docs && \
-          mkdocs build && \
-          mv ./docs /docs && \
-          cd %{{ github.workspace }} && \
-          git checkout pages && \
-          rm -rf * && \
-          mv /docs/* ./ && \
-          touch .nojekyll && \
-          git commit -a -m "automatically update pages" && \
-          git push origin pages
+          cd %{{ github.workspace }}/docs \
+#          && mkdocs build \
+#          && mv ./docs /docs \
+#          && cd %{{ github.workspace }} \
+#          && git checkout pages \
+#          && rm -rf * \
+#          && mv /docs/* ./ \
+#          && touch .nojekyll \
+#          && git commit -a -m "automatically update pages" \
+#          && git push origin pages
           
 
       # Runs a single command using the runners shell
