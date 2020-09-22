@@ -52,5 +52,6 @@ jobs:
           touch .nojekyll 
           git config user.name "explr"
           git config user.email "explr@qq.com"
-          git commit -a -m "automatically update pages" 
+          git add -A
+          git commit -m "automatically update pages" 
           git push origin pages
