@@ -16,9 +16,19 @@ def a():
     print('a ha')
 ```
 
-中文测试2
+1. some text
 
-更新测试
+```python
+# some code here
+```
+
+2. some text 2
+
+```python
+# some code here
+```
+
+
 
 ## Project layout
 
